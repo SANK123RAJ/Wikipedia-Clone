@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1>Create New Page</h1>
+<form action = "newpage" method="post" >
+    <div class="mb-3" style = "width: 1000px;">
+        <label for="exampleFormControlInput1" class="form-label">Enter Title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Title" name = "title">
+      </div>
+      <div class="mb-3" style = "width: 1000px; ">
+        <label for="exampleFormControlTextarea1" class="form-label">Example Markdown Script</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="markdown"></textarea>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-left: -15px;margin-bottom: 30px; background-color: green; border-color: green;">Submit</button>
+        {% csrf_token %}
+      </div>
+
+</form>
+
+
+{% endblock %}

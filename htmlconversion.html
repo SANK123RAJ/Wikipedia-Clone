@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+   <!-- INSERT HERE -->
+   <form action ="encyclopedia/edit" method="post">
+    <div class="col-12">
+        <input type="hidden" name ="test" value={{title}}>
+        <button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-left: -15px;margin-bottom: 30px;">Edit</button>
+        {% csrf_token %}
+      </div>
+   </form>
+  
+  
+
+
+{% endblock %}
