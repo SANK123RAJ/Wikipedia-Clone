@@ -87,7 +87,6 @@ def title(request):
            html_content = file.read()
            newfile = html_content.replace('<!-- INSERT HERE -->', html)
 
-
            save_path = r'encyclopedia\templates\encyclopedia'
            name_of_file = "updated"
            completeName = os.path.join(save_path, name_of_file+".html")        
